@@ -15,6 +15,7 @@ return {
           ["<M-v>"] = { "<cmd>4 ToggleTerm size=100 direction=vertical<cr>", desc = "ToggleTerm vertical split" },
           ["<M-b>"] = { "<cmd>lua _Btop_toggle()<cr>", desc = "Btop" },
           ["<leader>x"] = { "<cmd>bd<cr>", desc = "Close buffer" },
+          ["<leader>az"] = { "<cmd>ZenMode<cr>", desc = "Toggle ZenMode" },
         },
         t = {
           ["<M-f>"] = { "<cmd>2 ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },

@@ -85,6 +85,14 @@ return {
           desc = "Declaration of current symbol",
           cond = "textDocument/declaration",
         },
+        gd = {
+          "<cmd>Telescope lsp_definitions<cr>",
+          desc = "Definition of current symbol",
+        },
+        gr = {
+          "<cmd>Telescope lsp_references<cr>",
+          desc = "References of current symbol",
+        },
         ["<Leader>uY"] = {
           function() require("astrolsp.toggles").buffer_semantic_tokens() end,
           desc = "Toggle LSP semantic highlight (buffer)",

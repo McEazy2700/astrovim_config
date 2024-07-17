@@ -20,4 +20,6 @@ return {
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.recipes.telescope-nvchad-theme" },
   { import = "astrocommunity.colorscheme.rose-pine" },
+  -- { import = "astrocommunity.completion.codeium-vim" },
+  -- { import = "astrocommunity.completion.copilot-lua" },
 }

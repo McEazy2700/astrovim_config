@@ -16,6 +16,10 @@ return {
           ["<M-b>"] = { "<cmd>lua _Btop_toggle()<cr>", desc = "Btop" },
           ["<leader>x"] = { "<cmd>bd<cr>", desc = "Close buffer" },
           ["<leader>az"] = { "<cmd>ZenMode<cr>", desc = "Toggle ZenMode" },
+          ["<leader>lgr"] = {
+            [[<cmd>lua require("spectre").open_visual({select_word=true})<cr>]],
+            desc = "Search Current Word",
+          },
         },
         t = {
           ["<M-f>"] = { "<cmd>2 ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },

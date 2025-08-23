@@ -9,7 +9,6 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.python" },
-  { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.zig" },

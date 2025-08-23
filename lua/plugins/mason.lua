@@ -8,10 +8,8 @@ return {
       ensure_installed = {
         "lua_ls",
         "pyright",
-        "ruff",
-        "ruff_lsp",
+        "basedpyright",
         "rust_analyzer",
-        "tsserver",
         "biome",
         -- add more arguments for adding more language servers
       },

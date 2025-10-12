@@ -27,6 +27,12 @@ return {
           ["<M-b>"] = { "<cmd>lua _Btop_toggle()<cr>", desc = "Btop" },
           ["<M-v>"] = { "<cmd>4 ToggleTerm size=80 direction=vertical<cr>", desc = "ToggleTerm vertical split" },
         },
+        i = {
+          ["<M-f>"] = { "<cmd>2 ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
+          ["<M-h>"] = { "<cmd>3 ToggleTerm size=10 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
+          ["<M-b>"] = { "<cmd>lua _Btop_toggle()<cr>", desc = "Btop" },
+          ["<M-v>"] = { "<cmd>4 ToggleTerm size=80 direction=vertical<cr>", desc = "ToggleTerm vertical split" },
+        },
       },
     },
   },

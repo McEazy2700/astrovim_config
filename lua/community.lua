@@ -11,7 +11,7 @@ return {
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.cpp" },
-  { import = "astrocommunity.pack.zig" },
+  -- { import = "astrocommunity.pack.zig" },
   { import = "astrocommunity.pack.dart" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.dracula-nvim" },

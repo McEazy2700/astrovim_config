@@ -6,16 +6,16 @@ return {
   },
   opts = {
     terminal = {
-      size = 120,
+      size = 100,
     },
     -- See Configuration section for options
   },
   keys = {
     { "<leader>a", nil, desc = "AI Agents" },
-    { "<leader>ai", "<cmd>Gemini<cr>", desc = "Toggle Gemini", mode = { "n" } },
+    { "<M-i>", "<cmd>Gemini<cr>", desc = "Toggle Gemini", mode = { "n", "i", "t" } },
     -- { "<leader>agr", "<cmd>GeminiResume<cr>", desc = "Resume Gemini" },
     -- { "<leader>agm", "<cmd>GeminiSelectModel<cr>", desc = "Select Gemini model" },
-    { "<leader>ai", "<cmd>GeminiAsk<cr>", desc = "Ask Gemini", mode = { "v" } },
+    { "<M-i>", "<cmd>GeminiAsk<cr>", desc = "Ask Gemini", mode = { "v" } },
     -- {
     --   "<leader>agb",
     --   function() require("gemini-cli.integrations").add_to_context(vim.api.nvim_buf_get_name(0)) end,

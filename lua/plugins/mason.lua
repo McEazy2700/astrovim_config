@@ -11,7 +11,6 @@ return {
         "basedpyright",
         "rust_analyzer",
         "biome",
-        -- add more arguments for adding more language servers
       },
     },
   },
@@ -23,6 +22,9 @@ return {
       ensure_installed = {
         "prettier",
         "stylua",
+        "black",
+        "gofumpt", -- Go formatter (also covered by go pack)
+        "hadolint", -- Dockerfile linter (also covered by docker pack)
         -- add more arguments for adding more null-ls sources
       },
     },
@@ -33,6 +35,7 @@ return {
     opts = {
       ensure_installed = {
         "python",
+        "delve", -- Go debugger (also covered by go pack)
         -- add more arguments for adding more debuggers
       },
     },

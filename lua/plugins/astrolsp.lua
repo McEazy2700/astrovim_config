@@ -28,8 +28,7 @@ return {
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
-        -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
-        -- "lua_ls",
+        "lua_ls", -- use StyLua via none-ls instead
       },
       timeout_ms = 1000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
@@ -92,6 +91,25 @@ return {
         gr = {
           "<cmd>Telescope lsp_references<cr>",
           desc = "References of current symbol",
+        },
+        gi = {
+          "<cmd>Telescope lsp_implementations<cr>",
+          desc = "Implementation of current symbol",
+        },
+        gt = {
+          "<cmd>Telescope lsp_type_definitions<cr>",
+          desc = "Type definition of current symbol",
+        },
+        -- Explicitly pin these so they work in every filetype including Rust
+        ["<leader>lr"] = {
+          function() vim.lsp.buf.rename() end,
+          desc = "Rename current symbol",
+          cond = "textDocument/rename",
+        },
+        ["<leader>la"] = {
+          function() vim.lsp.buf.code_action() end,
+          desc = "LSP code action",
+          cond = "textDocument/codeAction",
         },
         ["<Leader>uY"] = {
           function() require("astrolsp.toggles").buffer_semantic_tokens() end,

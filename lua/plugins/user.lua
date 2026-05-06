@@ -4,11 +4,9 @@ return {
   -- == Examples of Adding Plugins ==
 
   "andweeb/presence.nvim",
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "BufRead",
-    config = function() require("lsp_signature").setup() end,
-  },
+  -- lsp_signature.nvim removed: it fires during operator-pending mode (e.g. yiw)
+  -- and triggers "Press ENTER" prompts. AstroNvim's nvim-cmp already provides
+  -- signature help in insert mode.
 
   -- == Examples of Overriding Plugins ==
 

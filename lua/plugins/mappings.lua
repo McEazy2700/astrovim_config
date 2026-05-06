@@ -8,6 +8,13 @@ return {
     "AstroNvim/astrocore",
     ---@type AstroCoreOpts
     opts = {
+      -- cmdheight=1 prevents "Press ENTER" prompts when messages (yank counts,
+      -- LSP notifications, etc.) can't fit in a zero-height cmdline.
+      options = {
+        opt = {
+          cmdheight = 1,
+        },
+      },
       mappings = {
         n = {
           ["<M-f>"] = { "<cmd>2 ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },

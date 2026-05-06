@@ -1,12 +1,10 @@
+-- Server-specific LSP settings.
+-- vtsls is installed and managed by astrocommunity.pack.typescript.
 return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
       vtsls = {
-        enabled = false,
-      },
-      tsserver = {
-        enabled = true,
         settings = {
           typescript = {
             inlayHints = {
@@ -20,15 +18,21 @@ return {
               includeInlayVariableTypeHintsWhenTypeMatchesName = false,
             },
           },
-          completions = {
-            completeFunctionCalls = true,
+          javascript = {
+            inlayHints = {
+              includeInlayEnumMemberValueHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayParameterNameHints = "literals",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+              includeInlayPropertyDeclarationTypeHints = true,
+              includeInlayVariableTypeHints = false,
+              includeInlayVariableTypeHintsWhenTypeMatchesName = false,
+            },
           },
+          completions = { completeFunctionCalls = true },
         },
       },
-    },
-    setup = {
-      tsserver = function() return false end,
-      vtsls = function() return true end,
     },
   },
 }

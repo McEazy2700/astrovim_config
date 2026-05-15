@@ -11,6 +11,8 @@ return {
         "basedpyright",
         "rust_analyzer",
         "biome",
+        "volar",
+        "intelephense",
       },
     },
   },
@@ -24,8 +26,7 @@ return {
         "stylua",
         "black",
         "gofumpt", -- Go formatter (also covered by go pack)
-        "hadolint", -- Dockerfile linter (also covered by docker pack)
-        -- add more arguments for adding more null-ls sources
+        "php-cs-fixer",
       },
     },
   },
@@ -36,6 +37,7 @@ return {
       ensure_installed = {
         "python",
         "delve", -- Go debugger (also covered by go pack)
+        "php-debug-adapter",
         -- add more arguments for adding more debuggers
       },
     },

@@ -24,6 +24,9 @@ return {
       "json",
       "jsonc",
 
+      -- Vue
+      "vue",
+
       -- Svelte
       "svelte",
       "graphql",
@@ -36,6 +39,11 @@ return {
       "gomod",
       "gosum",
       "gowork",
+
+      -- PHP
+      "php",
+      "phpdoc",
+      "blade",
 
       -- Docker
       "dockerfile",

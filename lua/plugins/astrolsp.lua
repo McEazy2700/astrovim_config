@@ -29,6 +29,8 @@ return {
       },
       disabled = { -- disable formatting capabilities for the listed language servers
         "lua_ls", -- use StyLua via none-ls instead
+        "volar", -- use Prettier via none-ls instead
+        "intelephense", -- use php-cs-fixer via none-ls instead
       },
       timeout_ms = 1000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function

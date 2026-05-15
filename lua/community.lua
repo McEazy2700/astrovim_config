@@ -7,6 +7,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.typescript" }, -- JS / TS / React (JSX/TSX)
@@ -15,6 +16,7 @@ return {
   { import = "astrocommunity.pack.cpp" },
   -- { import = "astrocommunity.pack.zig" },
   { import = "astrocommunity.pack.dart" },
+  { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.dracula-nvim" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },

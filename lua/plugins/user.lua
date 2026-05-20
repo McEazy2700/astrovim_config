@@ -4,6 +4,13 @@ return {
   -- == Examples of Adding Plugins ==
 
   "andweeb/presence.nvim",
+
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    ft = { "markdown" },
+    opts = {},
+  },
   -- lsp_signature.nvim removed: it fires during operator-pending mode (e.g. yiw)
   -- and triggers "Press ENTER" prompts. AstroNvim's nvim-cmp already provides
   -- signature help in insert mode.

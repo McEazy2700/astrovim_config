@@ -8,7 +8,6 @@ return {
     terminal = {
       size = 100,
     },
-    -- See Configuration section for options
   },
   keys = {
     { "<leader>a", nil, desc = "AI Agents" },

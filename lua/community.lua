@@ -23,6 +23,8 @@ return {
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.recipes.telescope-nvchad-theme" },
   { import = "astrocommunity.colorscheme.rose-pine" },
+  -- { import = "astrocommunity.recipes.ai" },
+  -- { import = "astrocommunity.ai.avante-nvim" },
   -- { import = "astrocommunity.completion.codeium-vim" },
   -- { import = "astrocommunity.completion.copilot-lua" },
 }

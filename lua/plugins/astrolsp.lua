@@ -127,6 +127,9 @@ return {
     on_attach = function(client, bufnr)
       -- this would disable semanticTokensProvider for all clients
       -- client.server_capabilities.semanticTokensProvider = nil
+
+      -- disable inlay hints for Rust only (rust_analyzer is managed by rustaceanvim)
+      if client.name == "rust_analyzer" then vim.lsp.inlay_hint.enable(false, { bufnr = bufnr }) end
     end,
   },
 }

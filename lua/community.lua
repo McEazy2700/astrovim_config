@@ -21,7 +21,7 @@ return {
   { import = "astrocommunity.colorscheme.dracula-nvim" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
-  { import = "astrocommunity.recipes.telescope-nvchad-theme" },
+  { import = "astrocommunity.recipes.picker-nvchad-theme" },
   { import = "astrocommunity.colorscheme.rose-pine" },
   -- { import = "astrocommunity.recipes.ai" },
   -- { import = "astrocommunity.ai.avante-nvim" },

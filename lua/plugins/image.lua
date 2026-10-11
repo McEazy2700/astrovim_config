@@ -2,6 +2,7 @@
 return {
   {
     "3rd/image.nvim",
+    cond = vim.fn.has("win32") ==0,
     build = "luarocks --local install magick",
     event = "BufEnter",
     opts = {

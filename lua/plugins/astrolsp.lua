@@ -87,19 +87,19 @@ return {
           cond = "textDocument/declaration",
         },
         gd = {
-          "<cmd>Telescope lsp_definitions<cr>",
+          function() Snacks.picker.lsp_definitions() end,
           desc = "Definition of current symbol",
         },
         gr = {
-          "<cmd>Telescope lsp_references<cr>",
+          function() Snacks.picker.lsp_references() end,
           desc = "References of current symbol",
         },
         gi = {
-          "<cmd>Telescope lsp_implementations<cr>",
+          function() Snacks.picker.lsp_implementations() end,
           desc = "Implementation of current symbol",
         },
         gt = {
-          "<cmd>Telescope lsp_type_definitions<cr>",
+          function() Snacks.picker.lsp_type_definitions() end,
           desc = "Type definition of current symbol",
         },
         -- Explicitly pin these so they work in every filetype including Rust
@@ -117,7 +117,7 @@ return {
           function() require("astrolsp.toggles").buffer_semantic_tokens() end,
           desc = "Toggle LSP semantic highlight (buffer)",
           cond = function(client)
-            return client.supports_method "textDocument/semanticTokens/full" and vim.lsp.semantic_tokens ~= nil
+            return client:supports_method "textDocument/semanticTokens/full" and vim.lsp.semantic_tokens ~= nil
           end,
         },
       },

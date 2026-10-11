@@ -2,6 +2,13 @@
 return {
 
   -- == Examples of Adding Plugins ==
+  --
+  {
+    "akinsho/toggleterm.nvim",
+    opts = function(_, opts)
+      if vim.fn.has "win32" == 1 then opts.shell = "powershell" end
+    end,
+  },
 
   "andweeb/presence.nvim",
 
@@ -12,29 +19,30 @@ return {
     opts = {},
   },
   -- lsp_signature.nvim removed: it fires during operator-pending mode (e.g. yiw)
-  -- and triggers "Press ENTER" prompts. AstroNvim's nvim-cmp already provides
+  -- and triggers "Press ENTER" prompts. AstroNvim's blink.cmp already provides
   -- signature help in insert mode.
 
   -- == Examples of Overriding Plugins ==
 
-  -- customize alpha options
+  -- customize the dashboard (AstroNvim v5 uses the Snacks dashboard instead of alpha-nvim)
   {
-    "goolord/alpha-nvim",
-    opts = function(_, opts)
-      -- customize the dashboard header
-      opts.section.header.val = {
-        [[                                                                                                                              ]],
-        [[                            			███████╗ █████╗ ███████╗██╗   ██╗     ██╗   ██╗██╗███╗   ███╗                               ]],
-        [[                            			██╔════╝██╔══██╗╚══███╔╝╚██╗ ██╔╝     ██║   ██║██║████╗ ████║                               ]],
-        [[                            			█████╗  ███████║  ███╔╝  ╚████╔╝█████╗██║   ██║██║██╔████╔██║                               ]],
-        [[                            			██╔══╝  ██╔══██║ ███╔╝    ╚██╔╝ ╚════╝╚██╗ ██╔╝██║██║╚██╔╝██║                               ]],
-        [[                            			███████╗██║  ██║███████╗   ██║         ╚████╔╝ ██║██║ ╚═╝ ██║                               ]],
-        [[                            			╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝          ╚═══╝  ╚═╝╚═╝     ╚═╝                               ]],
-        [[                            			                                                                                            ]],
-        "-----------------------------------------------------Let's get down to code----------------------------------------------------",
-      }
-      return opts
-    end,
+    "folke/snacks.nvim",
+    opts = {
+      dashboard = {
+        preset = {
+          header = table.concat({
+            [[███████╗ █████╗ ███████╗██╗   ██╗     ██╗   ██╗██╗███╗   ███╗]],
+            [[██╔════╝██╔══██╗╚══███╔╝╚██╗ ██╔╝     ██║   ██║██║████╗ ████║]],
+            [[█████╗  ███████║  ███╔╝  ╚████╔╝█████╗██║   ██║██║██╔████╔██║]],
+            [[██╔══╝  ██╔══██║ ███╔╝    ╚██╔╝ ╚════╝╚██╗ ██╔╝██║██║╚██╔╝██║]],
+            [[███████╗██║  ██║███████╗   ██║         ╚████╔╝ ██║██║ ╚═╝ ██║]],
+            [[╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝          ╚═══╝  ╚═╝╚═╝     ╚═╝]],
+            "",
+            "--------------------Let's get down to code--------------------",
+          }, "\n"),
+        },
+      },
+    },
   },
 
   -- You can disable default plugins as follows:

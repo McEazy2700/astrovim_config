@@ -8,29 +8,29 @@ return {
     opts.server = opts.server or {}
     opts.server.on_attach = function(client, bufnr)
       if original_on_attach then original_on_attach(client, bufnr) end
-      -- Telescope-based navigation (mirrors astrolsp.lua)
+      -- Snacks picker-based navigation (mirrors astrolsp.lua)
       vim.keymap.set(
         "n",
         "gd",
-        "<cmd>Telescope lsp_definitions<cr>",
+        function() Snacks.picker.lsp_definitions() end,
         { buffer = bufnr, desc = "Definition of current symbol", silent = true }
       )
       vim.keymap.set(
         "n",
         "gr",
-        "<cmd>Telescope lsp_references<cr>",
+        function() Snacks.picker.lsp_references() end,
         { buffer = bufnr, desc = "References of current symbol", silent = true }
       )
       vim.keymap.set(
         "n",
         "gi",
-        "<cmd>Telescope lsp_implementations<cr>",
+        function() Snacks.picker.lsp_implementations() end,
         { buffer = bufnr, desc = "Implementation of current symbol", silent = true }
       )
       vim.keymap.set(
         "n",
         "gt",
-        "<cmd>Telescope lsp_type_definitions<cr>",
+        function() Snacks.picker.lsp_type_definitions() end,
         { buffer = bufnr, desc = "Type definition of current symbol", silent = true }
       )
       -- Standard LSP actions
